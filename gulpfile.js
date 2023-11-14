@@ -1,11 +1,11 @@
 const gulp = require('gulp');
 const sass = require('gulp-sass')(require('sass'));
 const imagemin = require('gulp-imagemin');
-const uglyfy = require('gulp-uglyfy');
+const uglify = require('gulp-uglify');
 
 function scripts() {
     return gulp.src('./src/scripts/*.js')
-        .pipe(uglyfy())
+        .pipe(uglify())
         .pipe(gulp.dest('./dist/js'))
 }
 
